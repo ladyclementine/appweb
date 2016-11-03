@@ -1,0 +1,50 @@
+<div class="container">
+<%= form_for(internship) do |f| %>
+  <% if internship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(internship.errors.count, "error") %> prohibited this internship from being saved:</h2>
+
+      <ul>
+      <% internship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :office %>
+    <%= f.text_field :office %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cash %>
+    <%= f.text_field :cash %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.text_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :graduation_id %>
+    <%= f.select :graduation_id, Graduation.all.collect { |c| [ c.name, c.id ] }, class:" browser-default", include_blank: true %>
+  </div>
+ 
+  
+  <div class="waves-effect waves-light btn">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
