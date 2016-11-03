@@ -22,7 +22,7 @@
   <body>
   <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js"%>
   <%= javascript_include_tag "js/materialize.min.js"%>
-<<<<<<< HEAD
+
       
      <nav  class="extended-nav">
       <div class="nav-wrapper">
@@ -41,6 +41,7 @@
               <li><%= link_to 'Sair', destroy_user_company_session_path, :method => :delete%></li>
             <% end %>
           </ul>
+          
             <ul class="side-nav" id="mobile-demo">
             <% if !current_user_company %>
                 <li><%= link_to "Cadastre sua empresa", new_user_company_registration_path%></li>
@@ -66,34 +67,5 @@
     <%= yield %>
   </body>
  
-=======
-    
-     <nav>
-      <div class="nav-wrapper">
-      <%= link_to "Mural de estágios", welcome_index_path, class:'brand-logo center'%>
-        <% if !current_user_company %>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><%= link_to "Cadastre sua empresa", new_user_company_registration_path%></li>
-            <li><%= link_to "Entrar", new_user_company_session_path%></li>
-            <%end%>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <% if user_company_signed_in? %>
-          <li><%= link_to "Perfil", perfil_index_path %></li>
-          <li><%= link_to "Adicionar estágios", new_internship_path%></li>
-          <li><%= link_to "Meus anúncios", internships_path%></li>
-          <li><%= link_to 'Sair', destroy_user_company_session_path, :method => :delete%></li>
-          <% end %>
-        </ul>
-        </ul>
-      </div>
-    </nav>
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-    <%= yield %>
-  </body>
->>>>>>> 64486bd68076e055bdd9a83640c76b7bc06e3c6d
-</html>
+
+    </html>

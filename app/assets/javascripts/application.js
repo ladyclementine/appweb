@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-<<<<<<< HEAD
 //= require materialize
 
-=======
->>>>>>> 64486bd68076e055bdd9a83640c76b7bc06e3c6d
+
