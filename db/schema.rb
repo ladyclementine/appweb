@@ -29,13 +29,7 @@ ActiveRecord::Schema.define(version: 20161103000821) do
     t.string   "description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-<<<<<<< HEAD
-    t.integer  "course_id"
     t.integer  "user_company_id"
-    t.string   "course"
-=======
-    t.integer  "user_company_id"
->>>>>>> 64486bd68076e055bdd9a83640c76b7bc06e3c6d
     t.integer  "graduation_id"
   end
 
