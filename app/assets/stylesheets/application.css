@@ -14,3 +14,20 @@
  *= require_self
   
  */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+ 
+nav {
+  background-color: #A52A2A !important;
+}
+footer {
+	background-color: #A52A2A !important;
+}

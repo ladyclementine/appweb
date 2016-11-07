@@ -4,8 +4,14 @@ class InternshipsController < ApplicationController
   # GET /internships
   # GET /internships.json
   def index
+    if user_company_signed_in?
     @internships = Internship.where(user_company: current_user_company)
-  end
+    elsif params[:search]
+    @internships = Internship.where(graduation_id: params[:search])
+    end
+end 
+ 
+
 
   # GET /internships/1
   # GET /internships/1.json
@@ -70,6 +76,6 @@ class InternshipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def internship_params
-      params.require(:internship).permit(:office, :company, :cash, :duration, :description, :graduation_id)
+      params.require(:internship).permit(:office, :company, :cash, :duration, :description, :graduation_id, :graduation)
     end
 end

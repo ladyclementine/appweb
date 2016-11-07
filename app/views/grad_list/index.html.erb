@@ -1,0 +1,17 @@
+<div class="container">
+<% if !current_user_company%>
+<table>
+<tr>
+<td>
+<%=form_tag(internships_path, :method => :get) do %>
+<%=select_tag 'search', options_for_select(Graduation.all.collect{|c| [c.name, c.id]}), include_blank: true %> </td>
+<td>
+<%= submit_tag "Search"%>
+     <%end%>
+	 <%end%>
+</td>
+</tr>
+</table>
+ </div>
+ 
+ 		

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'grad_list/index'
+
   get 'perfil/index'
 
   resources :graduations

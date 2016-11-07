@@ -1,6 +1,6 @@
 class GraduationsController < ApplicationController
   before_action :set_graduation, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user_company!, except:[:index,:show]
+  
   # GET /graduations
   # GET /graduations.json
   def index
