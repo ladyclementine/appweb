@@ -26,8 +26,9 @@ body {
       
  
 nav {
-  background-color: #A52A2A !important;
+  background-color: #00695c !important;
+  position: relative;
 }
 footer {
-	background-color: #A52A2A !important;
+	background-color: #757575 !important;
 }

@@ -7470,7 +7470,7 @@ Picker.extend( 'pickadate', DatePicker )
 $(document).ready(function() {
     $('select').material_select();
   });
-         
+  
     
         
 }( jQuery ));

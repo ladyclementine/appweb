@@ -1,20 +1,37 @@
- <!-- Page Layout here -->
-    <div class="container">
-    <div class="row">
+
 
       <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
-        <%= "Empresa: #{@user_companies.company}"%>
-
+        <%= image_tag @user_companies.avatar.url(:medium)%>
       </div>
-
       <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-        <%= "País: #{@user_companies.country}"%>
-      </div>
-      <div class="col s12 m8 l9">
-      <%= image_tag @user_companies.avatar.url(:medium)%>
-      	
+      <div class="container">
+         <table>
+         <tr>
+            <blockquote><strong>
+          <%= "Empresa: #{@user_companies.company}"%>
+            </blockquote></strong>
+          </tr>
+          <tr>
+          <td>
+            <blockquote>
+                <strong>
+          <%= "País: #{@user_companies.country}"%>
+                </strong>
+            </blockquote>
+          </td>
+          </tr>
+          <tr>
+          <td>
+            <blockquote>
+                
+          <%= link_to "Editar perfil", edit_user_company_registration_path,  class: "waves-effect waves-light btn"%>
+                
+            </blockquote>
+          </td>
+          </tr>
+         </table>
       </div>
 
     </div>
 
-</div>
+
