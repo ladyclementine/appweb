@@ -13,8 +13,10 @@
       <th>Duration</th>
       <th>Description</th>
       <th>Graduation</th>
+      <th>Curriculums</th>
       <th colspan="3"></th>
     </tr>
+   
   </thead>
 
   <tbody>
@@ -26,6 +28,15 @@
         <td><%= internship.duration %></td>
         <td><%= internship.description %></td>
         <td><%= internship.graduation.name%></td>
+        <% if !user_company_signed_in?%>
+        
+        <td><%= file_field_tag :curriculum %></td>
+        <td><%= submit_tag "Enviar" %></td>
+        
+        <%end%>
+        <% if user_company_signed_in?%>
+        <td> <%= internship.curriculum%></td>
+        <%end%>
         <% if user_company_signed_in?%>
         <td><%= link_to 'Show', internship %></td>
         <td><%= link_to 'Edit', edit_internship_path(internship) %></td>

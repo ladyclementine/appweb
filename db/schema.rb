@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107000241) do
+ActiveRecord::Schema.define(version: 20161108180028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "curriculums", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "graduations", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,11 +32,16 @@ ActiveRecord::Schema.define(version: 20161107000241) do
     t.string   "cash"
     t.string   "duration"
     t.string   "description"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "user_company_id"
     t.integer  "graduation_id"
     t.string   "graduation"
+    t.integer  "curriculum_id"
+    t.string   "curriculum_file_name"
+    t.string   "curriculum_content_type"
+    t.integer  "curriculum_file_size"
+    t.datetime "curriculum_updated_at"
   end
 
   create_table "user_companies", force: :cascade do |t|
