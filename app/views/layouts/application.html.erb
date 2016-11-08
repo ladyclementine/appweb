@@ -7,8 +7,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/icon?family=Material+Icons"%>
-      <!--Import materialize.css-->
-    <%= stylesheet_link_tag "css/materialize.min.css"%>
+  <!--Import materialize.css-->
+  <%= stylesheet_link_tag "css/materialize.min.css"%>
     <%= favicon_link_tag %>
 
   <!-- Compiled and minified CSS -->
@@ -23,10 +23,11 @@
   <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js"%>
   <%= javascript_include_tag "js/materialize.min.js"%>
 
-      
-     <nav  class="extended-nav">
+    <div class="navbar-fixed">
+     <nav  class="extended-nav", role="navigation" >
       <div class="nav-wrapper">
-        <i class="material-icons brand-logo center">supervisor_account</i>
+        
+         <a href="http://localhost:3000/welcome/index"><i class="material-icons brand-logo center">supervisor_account</i></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
             <% if !current_user_company %>
@@ -58,6 +59,7 @@
 
       </div>
     </nav>
+    </div>
     
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
